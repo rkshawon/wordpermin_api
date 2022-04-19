@@ -1,0 +1,8 @@
+.App {
+  height: 100vh;
+  overflow: hidden;
+}
+.main{
+  height: calc(100% - 19%);
+  display: flex;
+}

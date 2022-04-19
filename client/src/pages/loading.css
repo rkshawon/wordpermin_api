@@ -1,0 +1,28 @@
+.loadingbar{
+    margin-top: 10%;
+    margin-left: 40%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.outtercircle{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 195, 255, 0.1);
+    animation: load 1.5s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 7px dashed rgba(0, 0, 0, 0.178);
+}
+@keyframes load{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

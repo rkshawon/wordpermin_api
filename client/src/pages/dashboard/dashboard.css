@@ -1,0 +1,38 @@
+.dashboard{
+    flex: 4;
+    width: 100%;
+    background-color: rgba(0, 195, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    width: 700px;
+    height: 20px;
+    margin-top: 1.5%;
+    margin-left: 7%;
+    font-size: large;
+    font-weight: 600;
+}
+.tableContainer{
+    height: 400px;
+    width: 800px;
+    margin-top: .5%;
+    margin-left: 7%;
+}
+th, td{
+    width: 200px;
+    padding: 1px 20px;
+    text-align: left;
+}
+th{
+    background-color: rgb(65, 134, 96);
+    color: white;
+}
+tr:nth-child(odd){
+    background-color: #d9eaeb;
+
+}
+tr:nth-child(even){
+    background-color: rgb(229, 240, 238);
+
+}

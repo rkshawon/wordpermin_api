@@ -1,0 +1,96 @@
+.profilePage{
+    flex: 4;
+    width: 100%;
+    background-color: rgba(0, 195, 255, 0.1);
+    display: flex;
+}
+.leftProfile{
+    background-color: rgb(238, 245, 244);
+    height: 80%;
+    width: 30%;
+    margin-top: 5%;
+    margin-left: 2%;
+    box-shadow: 6px 8px 7px -7px #000000;
+    border-radius: 5px;
+}
+.leftUpper{
+    display: flex;
+    margin-left: 5%;
+    margin-top: 5%;
+    align-items: center;
+}
+.leftUpper h3{
+    margin-left: 5%;
+}
+.leftUpper img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.leftLower h2{
+    text-align: center;
+    margin-bottom: 10%;
+}
+.leftLower{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+.leftLower input{
+    margin-bottom: 10%;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    border: 2px inset ;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: inset -2px -2px 20px -22px #080808;
+    padding: 5px 10px;
+}
+.rightProfile{
+    margin-left: 20%;
+    margin-top: 5%;
+    height: 80%;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.rightUpper{
+    padding: 10px;
+    background-color: rgb(190, 241, 224);
+}
+.rightLower h3{
+    text-align: center;
+    padding: 5px;
+}
+.singleUserScoreBoard{
+    display: flex;
+    background-color: rgb(227, 232, 233);
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.historyRecord{
+    display: flex;
+    padding: 3px;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(136, 136, 136);
+    box-shadow: inset -2px -2px 20px -22px #080808;
+}
+.historyRecord h4{
+    font-weight:normal;
+}
+.updateBtn{
+    height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(94, 190, 158);
+    border-radius: 5%;
+}
+.updateBtn:hover{
+    cursor: pointer;
+    background-color: rgb(94, 180, 158);
+}
+.profileInput{
+    height: 20px;
+}
