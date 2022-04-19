@@ -16,7 +16,7 @@ function Topbar() {
   }
 
   return <div className='topbar'>
-    <div className="logo">WordsPerMin</div>
+    <div className="logo">𝐖𝐨𝐫𝐝𝐏𝐞𝐫𝐌𝐢𝐧</div>
 
     <div className="rightSide">
       <NavLink  to="/" style={{ color: 'inherit',  textDecoration: 'inherit'}}><div><span><HomeIcon/></span>Home</div></NavLink >

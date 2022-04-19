@@ -59,7 +59,7 @@ function Common() {
         setTimer(60)
         if(timerOn){
             interval = setInterval(()=>{
-                if(timerCounter>50){
+                if(timerCounter>0){
                     timerCounter = timerCounter - 1
                     setTimer(prevTimer => prevTimer - 1)
                     //console.log(timerCounter);
