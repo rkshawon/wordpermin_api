@@ -11,7 +11,7 @@ const uModel =  new Schema({
         type: String,
         required: true,
         unique: true,
-        max: 50,
+        max: 30,
         min: 6
     },
     password: {

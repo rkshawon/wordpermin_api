@@ -19,7 +19,7 @@ function Navbar() {
         <Link to="/advance" className='text-link'><h3 className={splitLocation[1] === "advance" ? "activeNav" : ""}>𝙰𝚍𝚟𝚊𝚗𝚌𝚎𝚍</h3></Link>
       </div>
       <div className="alphabetical">
-      <Link to="/alphabetical" className='text-link'><h3 className={splitLocation[1] === "alphabetical" ? "activeNav" : ""}> 𝙰𝚕𝚙𝚑𝚊𝚋𝚎𝚝𝚒𝚌𝚊𝚕</h3></Link>
+      <Link to="/alphabetical" className='text-link'><h3 className={splitLocation[1] === "alphabetical" ? "activeNav" : ""}> 𝙰𝚕𝚙𝚑𝚊𝚋𝚎𝚝𝚒𝚌</h3></Link>
     </div>
       <div className="common">
         <Link to="/commonword" className='text-link'><h3 className={splitLocation[1] === "commonword" ? "activeNav" : ""}>𝙲𝚘𝚖𝚖𝚘𝚗</h3></Link>

@@ -1,6 +1,7 @@
 .topbar{
     height: 55px;
     width: 100%;
+    min-width: 720px;
     background-color: rgb(58, 148, 118);
     display: flex;
     margin-top: 0px;

@@ -35,8 +35,7 @@ const updateInfo = (req, res)=>{
 const pushScore = (req, res)=>{
     userModel.updateOne({_id: req.params.id}, {$push: {score: req.body.sc}})
     .then(user=>{
-        console.log('kojj' ,req.body.sc);
-        req.status(200).jspn("iinserted")
+        req.status(200).json("inserted")
     })
     .catch(err=>{
         res.status(200).json(err)

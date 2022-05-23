@@ -84,12 +84,18 @@ function Profile() {
                 <h4>Top 10</h4>
             </div>
             {!isfatching ? scores && scores.map((score, index)=>{
+              if(index<9)
               return(
                 <div className="historyRecord" key={uuid()}>
                   <h4>{index + 1}.</h4>
                   <h4>{score}</h4>
             </div>
-          )}): <Loding/>}
+          )
+          else{
+            return null
+          }
+        }
+          ): <Loding/>}
         </div>
     </div>
   </div>
