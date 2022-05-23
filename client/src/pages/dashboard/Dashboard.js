@@ -44,6 +44,7 @@ function Dashboard() {
               })
             }
             scoredData(user.score);
+            if(index<10)
             return(
               <tr key={uuid()}>
                 <td>{ index + 1}.</td>
@@ -51,6 +52,7 @@ function Dashboard() {
                 <td>{user.score[0]}</td>
               </tr>
             )
+            else return null 
           })}
           </tbody>
         </table> :<Loding/>}

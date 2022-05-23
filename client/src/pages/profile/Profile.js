@@ -29,10 +29,9 @@ function Profile() {
       const sum = sortedScore.reduce((partialSum, a) => partialSum + a, 0);
       const average = Math.floor( sum/sortedScore.length);
       setAverage(average)
-      console.log(average);
       setScores(sortedScore)
       setIsfatching(false)
-      //console.log("user data", user.data,"score",  scores);
+      console.log("user data", user.data,"score",  scores);
     })
     .catch(err=>{
       console.log(err)
@@ -84,17 +83,12 @@ function Profile() {
                 <h4>Top 10</h4>
             </div>
             {!isfatching ? scores && scores.map((score, index)=>{
-              if(index<9)
               return(
                 <div className="historyRecord" key={uuid()}>
                   <h4>{index + 1}.</h4>
                   <h4>{score}</h4>
             </div>
-          )
-          else{
-            return null
-          }
-        }
+          )}
           ): <Loding/>}
         </div>
     </div>

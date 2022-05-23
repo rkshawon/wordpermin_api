@@ -6,7 +6,7 @@
 }
 .leftProfile{
     background-color: rgb(238, 245, 244);
-    height: 80%;
+    height: 85%;
     width: 30%;
     margin-top: 5%;
     margin-left: 2%;
@@ -29,7 +29,7 @@
 }
 .leftLower h2{
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
 }
 .leftLower{
     display: flex;

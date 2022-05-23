@@ -5,10 +5,9 @@ const getAllData = (req, res)=>{
         {$unwind: "$score"},
         {$group: {_id: "$_id", name: {$addToSet:"$name"}, score:{$addToSet: "$score"}}},
         {$sort: {'score': -1}},
-    ]).limit(20)
+    ]).limit(11)
     .then(user =>{
         res.status(200).json(user)
-
     })
     .catch(err=>{
         res.status(200).json(err)
