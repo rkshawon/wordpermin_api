@@ -11,8 +11,8 @@ small{
     font-weight: bold;
 }
 .registerSection{
-    height: 70%;
-    width: 25%;
+    height: 75%;
+    width: 30%;
     background-color: rgb(240, 252, 255);
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ input,  button{
     margin-bottom: 10px;
 }
 .inputfield{
-    height: 7%;
+    height: 32px;
     font-family: 'Merriweather', serif;
     font-size: 15px;
     border: 2px inset ;
@@ -44,7 +44,7 @@ input,  button{
     border-color: rgb(47, 199, 77);
 }
 .registerBtn{
-    height: 8%;
+    height: 40px;
     box-shadow: 4px 5px 9px -5px rgba(0,0,0,0.72);
     border-radius: 3px;
     outline: none;
