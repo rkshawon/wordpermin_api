@@ -14,6 +14,7 @@ function Register() {
   const [errorMessageEmail, setErrorMessageEmail] = useState('')
   const [errorMessagePass, setErrorMessagePass] = useState('')
   const [errorMessagePass2, setErrorMessagePass2] = useState('')
+  const [serverError, setServerError] = useState('')
   let ename, eemail, epass, epass2 = true
 
   const nameCheck = ()=>{
@@ -28,7 +29,6 @@ function Register() {
       setErrorMessageName("Only Characters A-Z, a-z and '-' are  acceptable.")
     }
     else{
-      console.log('ok',name.current.value.length)
       if(name.current.value.length > 10){
         ename = true
         setErrorMessageName("Name must be less than 10 characters")
@@ -131,9 +131,13 @@ function Register() {
       password: password.current.value
     }
     formValidation()
+    try{
     if(!errorContainer()){
       const reg = await axios.post('/auth/register', userInfo)
       reg && navigate('/login')
+    }}
+    catch(err){
+      setServerError("Something went wrong")
     }
   }
 
@@ -141,18 +145,24 @@ function Register() {
     <div className='registerContainer'>
         <div className='registerSection'>
             <h2>Register</h2>
-            <input type = 'text' placeholder='Enter Name' className='inputfield' ref = {name}/>
+            <input type = 'text' placeholder='Enter Name' className='inputfield' ref = {name}
+              onClick= {()=>{setErrorMessageName(''); setServerError('')}}/>
               <small >{errorMessageName}</small>
-            <input type = 'text' placeholder='Enter Email' className='inputfield' ref = {email}/>
+            <input type = 'text' placeholder='Enter Email' className='inputfield' ref = {email}  
+              onClick= {()=>{setErrorMessageEmail(''); setServerError('')}}/>
               <small >{errorMessageEmail}</small>
-            <input type = "text" placeholder='Enter Password' className='inputfield' ref = {password}/>
+            <input type = "text" placeholder='Enter Password' className='inputfield' ref = {password}
+              onClick= {()=>{setErrorMessagePass(''); setServerError('')}}/>
               <small >{errorMessagePass}</small>
-            <input type = "text" placeholder='Confirm Password' className='inputfield' ref = {confirmPassword}/>
+            <input type = "text" placeholder='Confirm Password' className='inputfield' ref = {confirmPassword} 
+              onClick= {()=>{setErrorMessagePass2(''); setServerError('')}}/>
               <small >{errorMessagePass2}</small>
             <button className='registerBtn' onClick={handleRegisterClick}>Register</button>
             <div className="logintoaccount">
-            <Link to ='/login'>Already Member? Login</Link>
+              <Link to ='/login'>Already Member? Login</Link>
+              <small className="small">{serverError}</small>
           </div>
+          
         </div>
     </div>
   )

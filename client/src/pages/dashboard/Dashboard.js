@@ -25,7 +25,7 @@ function Dashboard() {
     }, [])
       return <div className='dashboard'>
       <div className="title">
-      Top 20 users with highest WPM:
+      Top 10 users with highest WPM:
       </div>
       <div className="tableContainer">
          {!isfatching ? <table>
