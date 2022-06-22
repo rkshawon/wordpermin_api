@@ -36,8 +36,12 @@
     flex-direction: column;
     margin: 5%;
 }
+.leftLower small{
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
 .leftLower input{
-    margin-bottom: 10%;
     font-family: 'Merriweather', serif;
     font-size: 15px;
     border: 2px inset ;

@@ -21,7 +21,7 @@ function Topbar() {
     <div className="rightSide">
       <NavLink  to="/" style={{ color: 'inherit',  textDecoration: 'inherit'}}><div><span><HomeIcon/></span>Home</div></NavLink >
       <NavLink  to="/dashboard" style={{ color: 'inherit', textDecoration: 'inherit'}}><div><span><LineStyleIcon/></span>Dashboard</div></NavLink >
-      {user && <NavLink  to ="/profile" style={{ color: 'inherit', textDecoration: 'inherit'}}><div><span><PersonIcon/></span>Profile</div></NavLink >}
+      {<NavLink  to ="/profile" style={{ color: 'inherit', textDecoration: 'inherit'}}><div><span><PersonIcon/></span>Profile</div></NavLink >}
       {!user?
       <NavLink  to ="/login" style={{ color: 'inherit', textDecoration: 'inherit'}}><div><span><LoginIcon/></span>Login / Register</div></NavLink > :
       <NavLink  to ="/" style={{ color: 'inherit', textDecoration: 'inherit'}}><div onClick={logOut}><span><LogoutIcon/></span>Logout</div></NavLink >}

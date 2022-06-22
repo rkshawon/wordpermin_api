@@ -131,7 +131,7 @@ function Profile() {
   }
 
   useEffect(()=>{
-    axios.get(`user/profile/${user._id}`)
+    axios.get(`user/profile/${user?._id}`)
     .then(user=>{
       setName(user.data.name)
       setEmail(user.data.email)
@@ -176,13 +176,17 @@ function Profile() {
         </div>
         <div className="leftLower">
           <h2>Update Information</h2>
-            <input type = 'text' className='profileInputText' placeholder={displayName} ref = {name}/>
+            <input type = 'text' className='profileInputText' placeholder={displayName} ref = {name}
+            onClick= {()=>{setErrorMessageName(''); setServerError('')}}/>
             <small >{errorMessageName}</small>
-            <input type = 'email' className='profileInputEmail' placeholder={displayEmail} ref={email}/>
+            <input type = 'email' className='profileInputEmail' placeholder={displayEmail} ref={email}
+            onClick= {()=>{setErrorMessageEmail(''); setServerError('')}}/>
             <small >{errorMessageEmail}</small>
-            <input type = 'password' className='profileInputPassword' placeholder="Password" ref={password}/>
+            <input type = 'password' className='profileInputPassword' placeholder="Password" ref={password}
+            onClick= {()=>{setErrorMessagePass(''); setServerError('')}}/>
             <small >{errorMessagePass}</small>
-            <input type = 'password' className='profileInputPassword' placeholder="Confirm Password" ref={confirmPassword}/>
+            <input type = 'password' className='profileInputPassword' placeholder="Confirm Password" ref={confirmPassword}
+            onClick= {()=>{setErrorMessagePass2(''); setServerError('')}}/>
             <small >{errorMessagePass2}</small>
             <button className = "updateBtn" onClick={updateInformation}>Update</button>
             <small className="small">{serverError}</small>
