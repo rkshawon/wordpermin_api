@@ -5,9 +5,8 @@
   "engines": {
     "node": "16.13.1"
   },
-  "scripts": {
+  "scripts": {s
     "start": "node server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
   "author": "",
