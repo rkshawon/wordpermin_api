@@ -5,8 +5,8 @@
   "engines": {
     "node": "16.13.1"
   },
-  "scripts": {s
-    "start": "node server.js",
+  "scripts": {
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
